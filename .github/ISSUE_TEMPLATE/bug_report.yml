@@ -1,0 +1,57 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly. What did you expect to happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we trigger this? Be as specific as possible.
+      placeholder: |
+        1. Open Catallaxy
+        2. Navigate to...
+        3. Click...
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Catallaxy version
+      description: Found in the About dialog (Catallaxy menu > About)
+      placeholder: "0.60.0"
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: macOS version
+      description: Apple menu > About This Mac
+      placeholder: "macOS 26.0 Tahoe"
+    validations:
+      required: true
+  - type: dropdown
+    id: adapter
+    attributes:
+      label: Which observer adapter(s) are affected?
+      multiple: true
+      options:
+        - Gemini
+        - Codex
+        - Claude
+        - Not adapter-specific
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, observer output, error messages, or anything else that might help.
+    validations:
+      required: false

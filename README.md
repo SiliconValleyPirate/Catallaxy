@@ -8,9 +8,9 @@ Catallaxy runs AI observer agents alongside your active coding session. Observer
 
 > **Beta** — This software is in closed beta. Expect rough edges. Your feedback shapes what ships.
 
-## Important: API costs
+## Important:
 
-Catallaxy orchestrates observer agents over your CLI or API subscription to their respective providers (Google Gemini, OpenAI Codex, Anthropic Claude). Each review cycle generates usage on your accounts. Monitor your provider dashboards for cost visibility.
+Catallaxy orchestrates observer agents over your CLI subscription to their respective providers (Google Gemini, OpenAI Codex, Anthropic Claude). Each review cycle generates usage on your accounts. Monitor your provider dashboards for cost visibility.
 
 ## Requirements
 

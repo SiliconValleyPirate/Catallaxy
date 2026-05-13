@@ -1,0 +1,22 @@
+Copyright © 2026 Max Marty. All rights reserved.
+
+This repository is the public issue tracker and documentation surface for
+the Catallaxy desktop application (https://catallaxy.app). It does not
+contain the application's source code.
+
+The README, documentation, and other authored content in this repository
+are proprietary to the copyright holder. No open-source license is granted.
+Redistribution, reuse, or derivative works are not permitted without prior
+written permission.
+
+For a plain-language summary of how the Catallaxy desktop application is
+licensed to end users, see "License and terms" in README.md. The binding
+Terms of Service governing use of the application are at
+https://catallaxy.app/terms.
+
+Third-party software listed in THIRD-PARTY-LICENSES.md retains its own
+licenses as documented there; this LICENSE does not modify or override
+those terms.
+
+Issues filed by users to this repository are subject to GitHub's Terms of
+Service.

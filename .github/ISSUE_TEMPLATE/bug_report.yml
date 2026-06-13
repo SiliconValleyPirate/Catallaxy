@@ -35,23 +35,14 @@ body:
       description: Apple menu > About This Mac
       placeholder: "macOS 26.0 Tahoe"
     validations:
-      required: true
-  - type: dropdown
-    id: adapter
-    attributes:
-      label: Which observer adapter(s) are affected?
-      multiple: true
-      options:
-        - Gemini
-        - Codex
-        - Claude
-        - Not adapter-specific
-    validations:
-      required: true
+      required: false
   - type: textarea
     id: additional
     attributes:
       label: Additional context
-      description: Screenshots, observer output, error messages, or anything else that might help.
+      description: >-
+        Screenshots, error messages, or anything else that might help.
+        Especially useful: attach your log file — in Catallaxy, choose
+        Session > Reveal Logs and drag catallaxy.log into this field.
     validations:
       required: false

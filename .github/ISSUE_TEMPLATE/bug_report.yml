@@ -44,5 +44,8 @@ body:
         Screenshots, error messages, or anything else that might help.
         Especially useful: attach your log file — in Catallaxy, choose
         Session > Reveal Logs and drag catallaxy.log into this field.
+        Note: This issue tracker is public: the log names the project folders
+        Catallaxy watched, so look through it first and leave out anything
+        you wouldn't post publicly.
     validations:
       required: false

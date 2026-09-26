@@ -52,18 +52,20 @@ Lost your link? [Ask for a new one](https://catallaxy.app/retrieve).
 1. In Catallaxy, choose **Session → Prepare for Uninstall…**. It removes Catallaxy's entries from your Claude Code settings. (The same menu item restores them if you change your mind before step 3.)
 2. Quit the app and move `Catallaxy.app` from `/Applications` to the Trash.
 3. Remove the data directory: `rm -rf ~/.catallaxy/`
-4. Optional leftovers, each harmless on its own: the backup Catallaxy took before its first change to your Claude Code settings, at `~/.claude/settings.json.catallaxy-backup`; the observer agent definition it wrote for Antigravity, at `~/.gemini/config/agents/catallaxy-observer/`; any `observer-protocol.md` you accepted into a project (a plain text file, yours to keep or delete); and the observers' own conversation histories, which live wherever each vendor's tool keeps its sessions (Claude Code's under `~/.claude/projects/`, Codex's under `~/.codex/sessions/`, Antigravity's under `~/.gemini/antigravity-cli/`).
+4. Remove the Keychain items. In Keychain Access, delete the entries whose service is `com.catallaxy.app`; or from the terminal, `security delete-generic-password -s com.catallaxy.app -a license_key`, and the same for `outpost_ca_cert`, `outpost_ca_key`, and any `outpost.<id>` entry if you paired an Outpost.
+5. Optional leftovers, each harmless on its own: the backup Catallaxy took before its first change to your Claude Code settings, at `~/.claude/settings.json.catallaxy-backup`; the observer agent definition it wrote for Antigravity, at `~/.gemini/config/agents/catallaxy-observer/`; any `observer-protocol.md` you accepted into a project (a plain text file, yours to keep or delete); and the observers' own conversation histories, which live wherever each vendor's tool keeps its sessions (Claude Code's under `~/.claude/projects/`, Codex's under `~/.codex/sessions/`, Antigravity's under `~/.gemini/antigravity-cli/`).
 
 ---
 
 ## Where Catallaxy stores its data
 
-Everything Catallaxy itself persists is under `~/.catallaxy/`:
+Everything Catallaxy itself persists is under `~/.catallaxy/`, apart from the credentials it keeps in your login Keychain (see below the table):
 
 | Path | What it is |
 |------|-----------|
-| `config.toml` | Operational config: bindings, rooms, summon configurations, app settings, your license key, and the hook token. Hand-editable for troubleshooting. |
+| `config.toml` | Operational config: bindings, rooms, summon configurations, app settings, and the hook token. Hand-editable for troubleshooting. |
 | `.hook-token` | A copy of the hook token, read by the relay script below. |
+| `installation_id` | A random identifier for this installation, written once at first launch and never rewritten; the license check uses it to count machines. |
 | `bin/hook-relay.sh` | The script Claude Code's hooks run. It holds the token so your Claude Code settings don't. |
 | `personas/<name>/` | One directory per persona: `persona.toml`, images, version history, and an Illustrator's showcase gallery. |
 | `lenses/<name>/` | One directory per lens: `lens.toml`, `prompt.md`, an optional icon, and any payload files. |
@@ -74,7 +76,7 @@ Everything Catallaxy itself persists is under `~/.catallaxy/`:
 | `freehold-state.json` | UI-only state, such as dismissed Freehold notifications. Deletable without breaking the app. |
 | `dispatch-trace.jsonl` | Optional debug trace, created only if `dispatch_trace = true` in `config.toml`. Size-capped. |
 
-`config.toml` and `.hook-token` carry your installation's secrets: the license key and the hook token. They never leave your machine.
+`config.toml` and `.hook-token` carry the hook token. Your license key lives in your login Keychain, under the service `com.catallaxy.app` (account `license_key`), and so do the certificate authority and bridge tokens Catallaxy creates if you pair an Outpost. None of it leaves your machine.
 
 ---
 

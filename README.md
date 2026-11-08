@@ -4,7 +4,7 @@
 
 **Status:** Closed beta · invite-only · macOS
 
-Catallaxy is a macOS app that runs a panel of passive AI observers alongside your Claude Code, Codex, Cowork, or ChatGPT Work sessions. The observers read the transcript as it grows and speak up when something is worth saying; they never touch the work. Everything else about the product lives on the site: what it is and who it's for at [catallaxy.app](https://catallaxy.app), and the questions people ask, from what you need to run it to what leaves your machine, on the [FAQ](https://catallaxy.app/faq).
+Catallaxy is a macOS app that runs a panel of passive AI observers alongside your Claude Code, Codex, or ChatGPT Work sessions. The observers read the transcript as it grows and speak up when something is worth saying; they never touch the work. Everything else about the product lives on the site: what it is and who it's for at [catallaxy.app](https://catallaxy.app), and the questions people ask, from what you need to run it to what leaves your machine, on the [FAQ](https://catallaxy.app/faq).
 
 **This repository is the issue tracker.** It does not contain the source code, which is closed during the beta. What it holds: this README, the bug-report template, and the third-party license inventory.
 
@@ -49,17 +49,17 @@ Lost your link? [Ask for a new one](https://catallaxy.app/retrieve).
 
 ## Uninstalling
 
-1. In Catallaxy, choose **Session → Prepare for Uninstall…**. It removes Catallaxy's entries from your Claude Code settings. (The same menu item restores them if you change your mind before step 3.)
+1. In Catallaxy, open **Settings → Integration** and turn off **Connected to Claude Code**. It removes Catallaxy's entries from your Claude Code settings. (Turning it back on restores them if you change your mind before step 3.)
 2. Quit the app and move `Catallaxy.app` from `/Applications` to the Trash.
 3. Remove the data directory: `rm -rf ~/.catallaxy/`
 4. Remove the Keychain items. In Keychain Access, delete the entries whose service is `com.catallaxy.app`; or from the terminal, `security delete-generic-password -s com.catallaxy.app -a license_key`, and the same for `outpost_ca_cert`, `outpost_ca_key`, and any `outpost.<id>` entry if you paired an Outpost.
-5. Optional leftovers, each harmless on its own: the backup Catallaxy took before its first change to your Claude Code settings, at `~/.claude/settings.json.catallaxy-backup`; the observer agent definition it wrote for Antigravity, at `~/.gemini/config/agents/catallaxy-observer/`; any `observer-protocol.md` you accepted into a project (a plain text file, yours to keep or delete); and the observers' own conversation histories, which live wherever each vendor's tool keeps its sessions (Claude Code's under `~/.claude/projects/`, Codex's under `~/.codex/sessions/`, Antigravity's under `~/.gemini/antigravity-cli/`).
+5. Optional leftovers, each harmless on its own: the backup Catallaxy took before its first change to your Claude Code settings, at `~/.claude/settings.json.catallaxy-backup`; the observer agent definition it wrote for Antigravity, at `~/.gemini/config/agents/catallaxy-observer/`; the window's saved size and position at `~/Library/Application Support/com.catallaxy.app/`, and the system web view's storage and cache at `~/Library/WebKit/com.catallaxy.app/` and `~/Library/Caches/com.catallaxy.app/`; any `observer-protocol.md` you accepted into a project (a plain text file, yours to keep or delete); and the observers' own conversation histories, which live wherever each vendor's tool keeps its sessions (Claude Code's under `~/.claude/projects/`, Codex's under `~/.codex/sessions/`, Antigravity's under `~/.gemini/antigravity-cli/`).
 
 ---
 
 ## Where Catallaxy stores its data
 
-Everything Catallaxy itself persists is under `~/.catallaxy/`, apart from the credentials it keeps in your login Keychain (see below the table):
+Everything Catallaxy itself writes is under `~/.catallaxy/`, apart from the credentials it keeps in your login Keychain (see below the table). Two more folders under `~/Library` are written on the app's behalf rather than by it — the window's saved size and position by the window-state plugin, and the web view's storage and cache by macOS — and hold nothing else; the Uninstalling section lists them.
 
 | Path | What it is |
 |------|-----------|
@@ -76,7 +76,7 @@ Everything Catallaxy itself persists is under `~/.catallaxy/`, apart from the cr
 | `freehold-state.json` | UI-only state, such as dismissed Freehold notifications. Deletable without breaking the app. |
 | `dispatch-trace.jsonl` | Optional debug trace, created only if `dispatch_trace = true` in `config.toml`. Size-capped. |
 
-`config.toml` and `.hook-token` carry the hook token. Your license key lives in your login Keychain, under the service `com.catallaxy.app` (account `license_key`), and so do the certificate authority and bridge tokens Catallaxy creates if you pair an Outpost. None of it leaves your machine.
+`config.toml` and `.hook-token` carry the hook token. Your license key lives in your login Keychain, under the service `com.catallaxy.app` (account `license_key`), and so do the certificate authority and bridge tokens Catallaxy creates if you pair an Outpost. The hook token never leaves your machine. The license key is sent only to catallaxy.app, to validate your license and to sign your Freehold requests.
 
 ---
 
@@ -84,9 +84,9 @@ Everything Catallaxy itself persists is under `~/.catallaxy/`, apart from the cr
 
 Catallaxy learns about your Claude Code sessions, when one starts, when you send a prompt, when a turn finishes, through Claude Code's hook system. The entries it installs are command hooks that run `~/.catallaxy/bin/hook-relay.sh`, which forwards each event to a local-only server on `127.0.0.1:19191`, authenticated with your installation's token. The token lives in the relay script and under `~/.catallaxy/`, never in your Claude Code settings file.
 
-Hooks are installed at the **user level**, in `~/.claude/settings.json`, never per project. This is a deliberate security choice: project-level hooks committed to git have been the vector for reported Claude Code CVEs (`CVE-2025-59536`, `CVE-2026-21852`), and Catallaxy wants no part of that surface. The installer is append-only and keeps your existing hooks; it writes a backup to `~/.claude/settings.json.catallaxy-backup` before its first change, recognizes its own entries so it never duplicates them, and sweeps entries left by earlier releases. You can turn the connection off and on in Settings ("Connected to Claude Code"), or remove the entries with **Session → Prepare for Uninstall…**. While the connection is on, Catallaxy re-adds its entries at launch if they've gone missing.
+Hooks are installed at the **user level**, in `~/.claude/settings.json`, never per project. This is a deliberate security choice: project-level hooks committed to git have been the vector for reported Claude Code CVEs (`CVE-2025-59536`, `CVE-2026-21852`), and Catallaxy wants no part of that surface. The installer is append-only and keeps your existing hooks; it writes a backup to `~/.claude/settings.json.catallaxy-backup` before its first change, recognizes its own entries so it never duplicates them, and sweeps entries left by earlier releases. You can turn the connection off and on in **Settings → Integration** ("Connected to Claude Code"), which installs or removes the entries. While the connection is on, Catallaxy re-adds its entries at launch if they've gone missing.
 
-Cowork, Codex, and ChatGPT Work sessions need no hooks: Catallaxy reads the session files those tools write on your Mac.
+Codex and ChatGPT Work sessions need no hooks: Catallaxy reads the session files those tools write on your Mac.
 
 The first time a room is tied to a project folder, Catallaxy offers to add `observer-protocol.md` to it. It's a short plain-text file that tells your coding agent how to handle pasted observer alerts, and it ends by asking the agent to emit a marker when a turn is done, which is how Catallaxy times its reviews. Decline and nothing breaks; Catallaxy falls back to an idle timer.
 

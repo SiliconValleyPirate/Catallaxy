@@ -10,8 +10,8 @@ This document is generated from `Cargo.lock` and `pnpm-lock.yaml` by `pnpm gen:l
 
 ### Overview
 
-- **Apache License 2.0**: 305 dependency(ies)
-- **MIT License**: 119 dependency(ies)
+- **Apache License 2.0**: 306 dependency(ies)
+- **MIT License**: 118 dependency(ies)
 - **Unicode License v3**: 19 dependency(ies)
 - **BSD 3-Clause "New" or "Revised" License**: 7 dependency(ies)
 - **Mozilla Public License 2.0**: 7 dependency(ies)
@@ -5981,7 +5981,7 @@ Used by:
 - [rustc_version 0.4.1](https://github.com/djc/rustc-version-rs)
 - [rusticata-macros 4.1.0](https://github.com/rusticata/rusticata-macros.git)
 - [rustix 1.1.4](https://github.com/bytecodealliance/rustix)
-- [rustls 0.23.45](https://github.com/rustls/rustls)
+- [rustls 0.23.46](https://github.com/rustls/rustls)
 - [scopeguard 1.2.0](https://github.com/bluss/scopeguard)
 - [security-framework-sys 2.17.0](https://github.com/kornelski/rust-security-framework)
 - [security-framework 3.7.0](https://github.com/kornelski/rust-security-framework)
@@ -5991,7 +5991,7 @@ Used by:
 - [servo_arc 0.4.3](https://github.com/servo/stylo)
 - [signal-hook-registry 1.4.8](https://github.com/vorner/signal-hook)
 - [smallvec 1.15.1](https://github.com/servo/rust-smallvec)
-- [socket2 0.6.2](https://github.com/rust-lang/socket2)
+- [socket2 0.6.5](https://github.com/rust-lang/socket2)
 - [stable_deref_trait 1.2.1](https://github.com/storyyeller/stable_deref_trait)
 - [string_cache 0.8.9](https://github.com/servo/string-cache)
 - [string_cache 0.9.0](https://github.com/servo/string-cache)
@@ -8279,7 +8279,7 @@ Used by:
 - [image-webp 0.2.4](https://github.com/image-rs/image-webp)
 - [image 0.25.9](https://github.com/image-rs/image)
 - [itoa 1.0.17](https://github.com/dtolnay/itoa)
-- [libc 0.2.182](https://github.com/rust-lang/libc)
+- [libc 0.2.191](https://github.com/rust-lang/libc)
 - [mac-notification-sys 0.6.9](https://github.com/h4llow3En/mac-notification-sys)
 - [mac 0.1.1](https://github.com/reem/rust-mac.git)
 - [match_token 0.1.0](https://github.com/servo/html5ever)
@@ -8319,6 +8319,7 @@ Used by:
 - [siphasher 0.3.11](https://github.com/jedisct1/rust-siphash)
 - [siphasher 1.0.2](https://github.com/jedisct1/rust-siphash)
 - [syn 2.0.117](https://github.com/dtolnay/syn)
+- [syn 3.0.9](https://github.com/dtolnay/syn)
 - [sync_wrapper 1.0.2](https://github.com/Actyx/sync_wrapper)
 - [tauri-build 2.6.3](https://github.com/tauri-apps/tauri)
 - [tauri-codegen 2.6.3](https://github.com/tauri-apps/tauri)
@@ -9057,7 +9058,7 @@ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 Used by:
 
-- [rustls-webpki 0.103.15](https://github.com/rustls/webpki)
+- [rustls-webpki 0.103.16](https://github.com/rustls/webpki)
 
 <details>
 <summary>License text</summary>
@@ -9125,7 +9126,7 @@ THE SOFTWARE.
 
 Used by:
 
-- [mio 1.1.1](https://github.com/tokio-rs/mio)
+- [mio 1.2.4](https://github.com/tokio-rs/mio)
 
 <details>
 <summary>License text</summary>
@@ -10024,37 +10025,6 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
 
 Used by:
 
-- [trash 5.2.5](https://github.com/ArturKovacs/trash)
-
-<details>
-<summary>License text</summary>
-
-<pre>
-Copyright 2019 Artúr Barnabás Kovács
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction,
-including without limitation the rights to use, copy, modify, merge, publish, distribute,
-sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or
-substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
-OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-</pre>
-
-</details>
-
-#### MIT License
-
-Used by:
-
 - [axum-server 0.8.0](https://github.com/programatik29/axum-server)
 
 <details>
@@ -10418,7 +10388,7 @@ SOFTWARE.
 
 Used by:
 
-- [tokio-macros 2.6.1](https://github.com/tokio-rs/tokio)
+- [tokio-macros 2.7.2](https://github.com/tokio-rs/tokio)
 
 <details>
 <summary>License text</summary>
@@ -10774,7 +10744,7 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 Used by:
 
 - [tokio-util 0.7.18](https://github.com/tokio-rs/tokio)
-- [tokio 1.50.0](https://github.com/tokio-rs/tokio)
+- [tokio 1.54.1](https://github.com/tokio-rs/tokio)
 
 <details>
 <summary>License text</summary>
@@ -15243,7 +15213,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ### BSD-3-Clause
 
-#### source-map-js 1.2.1
+#### source-map-js 1.2.2
 
 Homepage: https://github.com/7rulnik/source-map-js
 
@@ -17180,7 +17150,7 @@ MIT License
 
 </details>
 
-#### @types/estree 1.0.8, 1.0.9
+#### @types/estree 1.0.8, 1.0.10
 
 Homepage: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/estree
 
@@ -17246,6 +17216,39 @@ MIT License
 
 </details>
 
+#### @types/node 24.19.1
+
+Homepage: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node
+
+<details>
+<summary>License text</summary>
+
+<pre>
+MIT License
+
+    Copyright (c) Microsoft Corporation.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE
+</pre>
+
+</details>
+
 #### @types/trusted-types 2.0.7
 
 Homepage: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/trusted-types
@@ -17279,7 +17282,7 @@ MIT License
 
 </details>
 
-#### @vitest/expect 4.1.11
+#### @vitest/expect 4.1.12
 
 Homepage: https://vitest.dev/api/expect
 
@@ -17312,7 +17315,7 @@ SOFTWARE.
 
 </details>
 
-#### @vitest/mocker 4.1.11
+#### @vitest/mocker 4.1.12
 
 Homepage: https://github.com/vitest-dev/vitest/tree/main/packages/mocker
 
@@ -17345,7 +17348,7 @@ SOFTWARE.
 
 </details>
 
-#### @vitest/pretty-format 4.1.11
+#### @vitest/pretty-format 4.1.12
 
 Homepage: https://github.com/vitest-dev/vitest/tree/main/packages/pretty-format
 
@@ -17378,7 +17381,7 @@ SOFTWARE.
 
 </details>
 
-#### @vitest/runner 4.1.11
+#### @vitest/runner 4.1.12
 
 Homepage: https://vitest.dev/api/advanced/runner
 
@@ -17411,7 +17414,7 @@ SOFTWARE.
 
 </details>
 
-#### @vitest/snapshot 4.1.11
+#### @vitest/snapshot 4.1.12
 
 Homepage: https://vitest.dev/guide/snapshot
 
@@ -17444,7 +17447,7 @@ SOFTWARE.
 
 </details>
 
-#### @vitest/spy 4.1.11
+#### @vitest/spy 4.1.12
 
 Homepage: https://vitest.dev/api/mock
 
@@ -17477,7 +17480,7 @@ SOFTWARE.
 
 </details>
 
-#### @vitest/utils 4.1.11
+#### @vitest/utils 4.1.12
 
 Homepage: https://github.com/vitest-dev/vitest/tree/main/packages/utils
 
@@ -17643,7 +17646,7 @@ SOFTWARE.
 
 </details>
 
-#### chai 6.2.2
+#### chai 6.3.0
 
 Homepage: http://chaijs.com
 
@@ -17726,39 +17729,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-</pre>
-
-</details>
-
-#### colord 2.10.0
-
-Homepage: https://github.com/omgovich/colord#readme
-
-<details>
-<summary>License text</summary>
-
-<pre>
-MIT License
-
-Copyright (c) 2020 Vlad Shilov omgovich@ya.ru
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 </pre>
 
 </details>
@@ -19958,7 +19928,7 @@ SOFTWARE.
 
 </details>
 
-#### undici 7.29.0
+#### undici 7.30.2
 
 Homepage: https://undici.nodejs.org
 
@@ -19991,7 +19961,40 @@ SOFTWARE.
 
 </details>
 
-#### vite 6.4.3
+#### undici-types 7.24.6
+
+Homepage: https://undici.nodejs.org
+
+<details>
+<summary>License text</summary>
+
+<pre>
+MIT License
+
+Copyright (c) Matteo Collina and Undici contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>
+
+</details>
+
+#### vite 6.4.5
 
 Homepage: https://vite.dev
 
@@ -22442,7 +22445,7 @@ SOFTWARE.
 
 </details>
 
-#### vitest 4.1.11
+#### vitest 4.1.12
 
 Homepage: https://vitest.dev
 
